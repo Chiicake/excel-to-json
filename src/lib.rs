@@ -2,6 +2,8 @@ pub mod utils;
 pub mod http_handler;
 pub mod thread_pool;
 pub mod server;
+pub mod reference_format;
+pub mod excel_to_json;
 
 use std::collections::HashMap;
 use std::error::Error;
@@ -28,7 +30,7 @@ pub fn excel_to_json(file_path: &str, target_path: &str) -> Result<String, Box<d
     let mut workbook: Xlsx<_> = open_workbook(file_path)?;
     let range = workbook.worksheet_range("Sheet1")?;
     let mut output = String::new();
-    
+
     range.rows().try_for_each(|row_result| {
         let row = row_result;
         if is_first_row {
