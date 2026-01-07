@@ -1,5 +1,4 @@
-# kawa-tool-box
-## What is this
+# excel-to-json
 It could convert excel file to json output for now.
 
 ## How to use
