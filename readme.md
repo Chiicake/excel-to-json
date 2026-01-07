@@ -1,7 +1,7 @@
 # excel-to-json
-It could convert excel file to json output for now.
+Convert excel file to json output.
 
-## How to use
+## LLM feature
 For MacOS: install ollama first
 ```bash
 ollama run Qwen3:4B
@@ -19,8 +19,3 @@ sudo apt-get install libgtk-3-dev
 sudo apt-get install pkg-config libssl-dev
 cargo run
 ```
-
-## Features
-
-- Convert excel file to json output
-- Transfer using AI (need ollama)
